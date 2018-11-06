@@ -22,7 +22,7 @@ Let's make a graph of Harry Potter v. Draco Malfoy acts of aggression.
 ```{r}
 
 hp_graph <- hp_data %>% 
-  filter(Name == "Harry" | Name == "Draco Malfoy") %>% 
+  filter(Name == "harry" | Name == "Draco Malfoy") %>% 
   select(Name, book, agg.per.mention) %>% 
   ggplot(aes(x = book, y = agg.per.mention)) +
   geom_col(aes(fill= Name), position = "dodge") +
